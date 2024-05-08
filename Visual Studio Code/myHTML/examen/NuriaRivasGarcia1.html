@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"><meta name="author" content="Nuria Rivas Garcia"><meta name="description" content="Ejercicio1">
+        <title>Formulario de datos</title>
+    </head>
+    <body>
+        <h1>Nuria Rivas Garc&iacutea</h1>
+        <form enctype="application/x-www-form-urlencoded" action="destino.php" method="post">
+            <table>
+                <tr>
+                    <td><fieldset><legend>Datos para el login</legend><label for="cuenta">Cuenta de usuario:</label><input id="cuenta" type="text" size="20" maxlength="15" required><br><br>
+                        <label for="password">Password:</label><input id="password" type="password" size="20" maxlength="20" pattern="[A-Z][0-9]{3}" required><br><br><br><br></fieldset></td>
+
+                    <td><fieldset><legend>Datos Personales</legend><label for="nombre">Nombre:</label><input id="nombre" type="text" size="20" maxlength="25" required><br><br>
+                        <!--No he añadido patterns a Nombre y Password porque hay nombres que pueden tener caracteres especiales, al igual que la contraseña, y no sé reflejar ese filtro.-->
+                        <label for="correo">Correo:</label><input id="correo" type="text" size="20" maxlength="50" required><br><br>
+                        <label for="telefono">Tel&eacutefono:</label><input id="telefono" type="tel" size="9" maxlength="9" pattern="[0-9]{9}" required><br><br></fieldset></td>
+                </tr>
+                <tr>
+                    <td><fieldset><legend>Vacante que solicitar</legend><label for="puesto">Tipo de puesto:</label><input id="puesto" type="select" name="select>Programador&nbsp;<input id="puesto" type="radio" name="radio">Administrador<br><br>
+                        <label for="exp">Experiencia en meses:</label><input type="number" id="exp" maxlength="3" max="3" size="3" pattern="[0-9]{3}" required></fieldset></td>
+
+                    <td><fieldset><legend>Fecha y hora de la solicitud</legend><label for="fecha">Fecha:</label><input id="fecha" type="date"><br><br><label for="hora">Hora:</label><input id="hora" type="datetime-local"></fieldset></td>
+                </tr>
+            </table>
+            <input type="submit">&nbsp;&nbsp;<input type="reset">
+        </form>
+    </body>
+</html>

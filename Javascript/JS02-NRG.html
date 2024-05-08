@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+        //Quiero realizar una suma simple
+            function suma()
+            {
+                var numero1 = parseInt(prompt('Numero 1'));
+                var numero2 =  parseInt(prompt('Numero2'));
+                var suma = numero1 + numero2;
+                alert("El resultado de la suma es: " + suma)
+            }
+            suma();
+
+            //Añado un botón para reiniciar el proceso
+            const button = document.getElementById("reset");
+                
+            function restart(){
+               window.location.reload();
+            }
+        </script>
+
+        <button type="submit" id="reset" onclick="restart()">Empezar de nuevo</button>
+    </body>
+</html>

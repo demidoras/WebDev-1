@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"><meta name="author" content="Nuria Rivas Garcia"><meta name="description" content="Ejercicio1">
+        <title>Test CSS</title><style type="text/css">label {color:rgb(35, 129, 120);}input {color:rgb(99, 141, 99);} 
+        select {color:orange;} legend {color:#784ac3;}</style>
+    </head>
+    <body>
+        
+        <form enctype="application/x-www-form-urlencoded" action="destino.php" method="post">
+            <table>
+                <tr>
+                    <td><fieldset><legend>Datos para el login</legend><label for="cuenta">Cuenta de usuario:</label><input id="cuenta" type="text" size="20" maxlength="15" required><br><br>
+                        <label for="password">Password:</label><input id="password" type="password" size="20" maxlength="20" pattern="[A-Z][0-9]{3}" required><br><br><br><br></fieldset></td>
+
+                    <td><fieldset><legend>Datos Personales</legend><label for="nombre">Nombre:</label><input id="nombre" type="text" size="20" maxlength="25" required><br><br>
+                        <!--No he añadido patterns a Nombre y Password porque hay nombres que pueden tener caracteres especiales, al igual que la contraseña, y no sé reflejar ese filtro.-->
+                        <label for="correo">Correo:</label><input id="correo" type="text" size="20" maxlength="50" required><br><br>
+                        <label for="telefono">Tel&eacutefono:</label><input id="telefono" type="tel" size="9" maxlength="9" pattern="[0-9]{9}" required><br><br></fieldset></td>
+                </tr>
+                <tr>
+                    <td><fieldset><legend>Vacante que solicitar</legend><label for="puesto">Tipo de puesto:</label><select name=”puesto”>
+                        <option value=”Admin”>Administrador</option>
+                        <option value=”Progra”>Programador</option>
+                        <option value=”Ambas”>Ambas opciones</option></select>
+                
+                <br><br>
+                        <label for="exp">Experiencia en meses:</label><input type="number" id="exp" maxlength="3" max="3" size="3" pattern="[0-9]{3}" required></fieldset></td>
+
+                    <td><fieldset><legend>Fecha y hora de la solicitud</legend><label for="fecha">Fecha:</label><input id="fecha" type="date"><br><br><label for="hora">Hora:</label><input id="hora" type="datetime-local"></fieldset></td>
+                </tr>
+            </table>
+            <input type="submit">&nbsp;&nbsp;<input type="reset">
+        </form>
+    </body>
+</html>

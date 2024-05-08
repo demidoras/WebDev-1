@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function calculo(){
+                var valor = document.getElementById("input").value;
+                if(valor == 0){document.getElementById("result").innerHTML = "Vaya 0";}
+                if(valor > 0 && valor <= 5){document.getElementById('result').innerHTML = "Buen número";}
+                if(valor > 5){document.getElementById("result").innerHTML = "Perfecto";}
+            }
+        </script>
+        <form>
+            <h2>Demo JavaScript</h2>
+            <input type="text" id="input" name="input" placeholder="Introduce un numero" pattern="[0-10]{1}">
+            <button type="button" id="button" name="button" onclick="calculo()"> Ver resultado</button>
+            <p id="result"></p>
+        </form>
+    </body>
+</html>

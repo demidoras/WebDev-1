@@ -1,0 +1,184 @@
+/*
+Añadir los estilos básicos de la página 
+(tipo de letra Verdana, color de letra #192666, 
+imagen de fondo llamada fondo.gif, color de fondo #F2F5FE).
+
+Definir la estructura básica de la página: 
+anchura fija de 770 píxel, centrada en la ventana del navegador, 
+cabecera y pie, columna central de contenidos 
+de anchura 530 píxel y columna secundaria de contenidos 
+de 200 píxel de anchura.
+
+La cabecera tiene una altura de 100 píxel y 
+una imagen de fondo llamada cabecera.jpg.
+
+Los elementos del menú de navegación tienen un 
+color de fondo #253575, un color de letra #B5C4E3. 
+Cuando el ratón pasa por encima de cada elemento, 
+su color de fondo cambia a #31479B. 
+Los elementos seleccionados se muestran con un color 
+de fondo blanco y un color de letra #FF9000
+=========================================================*/
+
+.clear{ /*Pongo una clase clear porque se menciona una en el html*/
+    clear: both;
+}
+
+body{
+    font-family: Verdana;
+    color: #192666;
+    background-image:url(../EjEX_CSS/imagenes/fondo.gif);
+    background-repeat: repeat-x;
+    background-color: #F2F5FE;
+    
+}
+
+div#contenedor{
+    width: 770px;
+    vertical-align: middle;
+    margin: auto;  
+}
+
+div#cabecera{
+    height: 100px;
+    background-image: url(../EjEX_CSS/imagenes/cabecera.jpg);
+    position: relative;
+}
+
+div#cabecera #logo{
+    position: absolute;
+    left:30px;
+    top: 10px;
+}
+
+div#cabecera #logo a{
+    color: white;
+}
+
+div#cabecera #buscador{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+div#cabecera #buscador legend{
+    display: none;
+}
+
+div#menu{
+    background-color: #253575;
+    color: #B5C4E3;
+    display: block;
+    clear: both;
+    margin: 5px;
+    padding-top: 10px;
+}
+
+div#menu ul li{
+    float: left;
+    list-style: none;
+}
+
+div#menu ul li a{
+    display: block;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+div#menu ul li a:hover{
+    background-color: #31479B;
+}
+
+div#menu ul li.seleccionado a{
+    background-color: white;
+    color: #FF9000;
+}
+
+div#contenido{
+    background-color: white;
+    margin: 5px;
+}
+
+div#contenido #principal{
+    width: 530px;
+    margin: 5px;
+    float: left;
+}
+
+div#contenido #principal .info span, .info a{
+    color: rgb(170, 182, 221);
+}
+
+div#contenido #principal p{
+    color: #333d64;
+}
+
+div#contenido .articulo{
+    background-image: url(../EjEX_CSS/imagenes/fondo_articulo.jpg);
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+#contenido .info span.fecha, #contenido .info span.categoria, #contenido .info span.autor, #contenido .info span.comentarios {
+    padding-left:15px;
+  }
+
+#contenido .info span.fecha { background: url(../EjEX_CSS/imagenes/icono_fecha.gif);
+    background-repeat: no-repeat;
+    margin-left: 8px;
+}
+#contenido .info span.categoria { background: url(../EjEX_CSS/imagenes/icono_categoria.gif);
+    background-repeat: no-repeat;
+    margin-left: 8px;
+}
+
+#contenido .info span.autor { background: url(../EjEX_CSS/imagenes/icono_autor.gif);
+    background-repeat: no-repeat;
+    margin-left: 8px;
+}
+
+#contenido .info span.comentarios { background: url(../EjEX_CSS/imagenes/icono_comentarios.gif);
+    background-repeat: no-repeat;
+    margin-left: 8px;
+}
+
+div#contenido #secundario{
+    width: 200px;
+    float: right;
+    margin: 10px;
+    background-image: url(../EjEX_CSS/imagenes/fondo_columna.gif);
+    background-repeat: no-repeat;
+    background-color: #e1e7f1;
+}
+
+div#contenido #secundario ul{
+    list-style: none;
+    margin: 15px;
+}
+
+div#contenido #secundario h3{
+    background-color: #b3bfda;
+}
+
+div#contenido #secundario li a{
+background: url(../EjEX_CSS/imagenes/icono_elemento.gif);
+background-repeat: no-repeat;
+padding: 0 0 0 20px;
+float: left;
+}
+
+#contenido #secundario li a:hover {
+background-color: #69738a;
+color: #ffffff;
+}
+
+#contenido #secundario li.seleccionado a {
+background: #E0E8FA url(../EjEX_CSS/imagenes/icono_elemento_seleccionado.gif);
+background-repeat: no-repeat;
+font-weight: bold;
+}
+
+div#pie{
+    margin: 5px;
+}

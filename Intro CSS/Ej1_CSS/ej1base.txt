@@ -1,0 +1,1 @@
+He cometido el error de usar estilos para muchos elementos en vez de clases generales.

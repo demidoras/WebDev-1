@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="ASTER">
+        <style>
+            .container{
+                width: 100%;
+            }
+            
+            #formulario{
+                display: grid;
+                grid-template-rows: repeat(9, 1fr);
+                grid-template-columns: 0.4fr 1fr 0.5fr 1fr;
+                column-gap: 30px;
+                row-gap: 10px;
+            }
+            
+            label{
+                font-weight: bold;
+            }
+
+            .botones{
+                display: flex;
+                justify-content: end;
+                margin-top: 20px;
+
+            }
+            #enviar{
+                background-color: rgb(101, 170, 101);
+                color: white;
+                border-radius: 12px;
+                border-style: none;
+                padding: 10px;
+                text-align: center;
+                margin-right: 15px;
+            }
+            #enviar:hover{
+                background-color: rgb(46, 78, 46);
+                color: white;
+            }
+
+            #actualizar{
+                background-color: rgb(65, 154, 206);
+                color: white;
+                border-radius: 12px;
+                border-style: none;
+                padding: 10px;
+                text-align: center;
+                margin-right: 15px;
+            }
+            #actualizar:hover{
+                background-color: rgb(41, 86, 112);
+                color: white;
+            }
+
+            #eliminar{
+                background-color: rgb(230, 81, 81);
+                color: white;
+                border-radius: 12px;
+                border-style: none;
+                padding: 10px;
+                text-align: center;
+            }
+            #eliminar:hover{
+                background-color: rgb(138, 52, 52);
+                color: white;
+            }
+
+            #color{
+                width: 300px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Ejercicio Grid 02</h2>
+            <form name="formulario" id="formulario">
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" type="text" name="nombre">
+
+                <label for="URL">URL:</label>
+                <input id="url" type="text" name="url" placeholder="Escribe la URL de tu página">
+
+                <label for="tiempo">Tiempo:</label>
+                <input id="tiempo" type="time" name="tiempo">
+
+                <label for="datetime">Fecha y hora local:</label>
+                <input id="datetime" type="datetime-local" name="datetime">
+
+                <label for="semana">Semana:</label>
+                <input id="semana" type="week" name="semana">
+
+                <label for="intervalo">Intervalo [0, max 10]:</label>
+                <input id="intervalo" type="range" min="0" max="10" value="0" name="intervalo">
+
+                <label for="termsearch">Término de búsqueda:</label>
+                <input id="termsearch" type="text" name="termsearch">
+
+                <label for="pattern">Patrón:</label>
+                <input id="pattern" type="text" name="pattern">
+
+                <label for="ciudad">Ciudad:</label>
+                <input id="ciudad" type="text" name="ciudad">
+
+                <label for="email">Correo electrónico:</label>
+                <input id="email" type="email" name="email">
+
+                <label for="fecha">Fecha:</label>
+                <input id="fecha" type="date" name="fecha">
+
+                <label for="birthday">Fecha/hora de nacimiento:</label>
+                <input id="birthday" type="text" name="birthday">
+
+                <label for="month">Mes:</label>
+                <input id="month" type="month" name="month">
+
+                <label for="intervalo2">Número [-10, 10]:</label>
+                <input id="intervalo2" type="range" min="-10" max="10" step="1" name="intervalo2">
+
+                <label for="telefono">Teléfono:</label>
+                <input id="telefono" type="tel" name="telefono" placeholder="+34 123 456 789">
+
+                <label for="color">Color favorito:</label>
+                <input id="color" type="color" name="color">
+
+                <label for="cp">Código postal:</label>
+                <input id="cp" type="text" pattern="[0-9]{5}" name="cp">
+
+                <label for="pais">País:</label>
+                <input id="pais" type="text" name="pais">
+            </form>
+
+                <div class="botones">
+                    <input name="enviar" id="enviar" value="Enviar" type="submit">
+                    <input name="actualizar" id="actualizar" value="Actualizar" type="button">
+                    <input name="eliminar" id="eliminar" value="Eliminar" type="reset">
+                </div>
+            
+        </div>
+    </body>
+</html>

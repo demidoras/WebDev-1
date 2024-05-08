@@ -1,0 +1,122 @@
+/* === IMPORTANTE ===
+   No modificar estos estilos, ya que son imprescindibles para
+   que la página se vea correctamente.
+   ================= */
+
+
+/*-- Básico ----------------------------------------------------------*/
+ul, ul li { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, p, form { margin: 0; padding: 0; }
+.clear { clear: both; }
+img { border: none; }
+
+/*-- Layout ----------------------------------------------------------*/
+#contenedor {
+  width: 90%;
+  max-width: 900px;
+  width: expression(document.body.clientWidth > 901? "900px": "auto");
+  margin: 0 auto;
+}
+
+/*#cabecera, #menu, #lateral, #contenido, #contenido #principal, #contenido #secundario, #pie {
+  border: 2px solid #777;
+}
+Comento este estilo porque me impide ver correctamente el renderizado*/
+
+#cabecera { clear: both;}
+#menu { clear: both; }
+#lateral { float: left; width: 20%; }
+#contenido { float: right; width: 78%; }
+#contenido #principal { float: left; width: 78%; }
+#contenido #secundario { float: right; width: 20%; }
+#pie { clear: both; }
+
+/*-- Cabecera ----------------78----------------------------------------*/
+#cabecera #logo { float: left; }
+#cabecera #buscador { float: right; }
+
+/*-- Menu ------------------------------------------------------------*/
+#menu ul#menu_principal li { display: inline; float: left; }
+
+/*-- Sección Principal -----------------------------------------------*/
+#contenido #principal .articulo img { width: 100px; float: left; }
+
+/*-- Pie de página ---------------------------------------------------*/
+#pie .enlaces   { float: left; }
+#pie .copyright { float: right; }
+
+/* === IMPORTANTE ===
+   A partir de aquí, se pueden añadir todos los estilos propios que
+   sean necesarios.
+   ================= */
+
+   /*  ===================================================================
+1.     La fuente base de la página debe ser: color negro, tipo Arial, 
+        tamaño 0.9em, interlineado 1.4.
+
+2.     Los elementos <h2> de .articulo se muestran en color #CC6600, 
+        con un tamaño de letra de 1.6em, un interlineado de 1.2 
+        y un margen inferior de 0.3em.
+
+3.     Los elementos del #menu deben mostrar un margen a su derecha 
+        de 1em y los enlaces deben ser de color blanco y tamaño de letra 1.3em.
+
+4.     El tamaño del texto de todos los contenidos de #lateral 
+        debe ser de 0.9em. La fecha de cada noticia debe ocupar el espacio de toda su línea y mostrarse en color gris claro #999. El elemento <h3> de #noticias debe mostrarse de color #003366.
+
+5.     El texto del elemento #publicidad es de color gris oscuro #555 
+        y todos los enlaces de color #CC6600.
+
+6.     Los enlaces contenidos dentro de .articulo son de 
+        color #CC6600 y todos los párrafos muestran un margen 
+        superior e inferior de 0.3em.
+
+7.     Añadir las reglas necesarias para que el contenido 
+        de #secundario se vea como en la imagen que se muestra.
+
+8.     Añadir las reglas necesarias para que el contenido 
+        de #pie se vea como en la imagen que se muestra
+        
+======================================================================*/
+
+body{font-family: Arial, Helvetica, sans-serif;
+      color:black;
+      font-size: 0.9em;
+      line-height: 1.4;}
+
+div.articulo h2{color: #CC6600;
+      font-size: 1.6em;
+      line-height: 1.2;
+      margin-bottom: 0.3em;}
+div.articulo a{color: #CC6600;}
+div.articulo p{margin-top: 0.3em;
+                margin-bottom: 0.3em;}
+div.articulo img{margin-right: 5px;}
+
+div#menu{margin-right: 1em; margin-bottom: 10px; margin-top: 10px; 
+        background-image:url('fondo_menu.gif');}
+div#menu a{color: white;
+            font-size: 1.3em}
+div#menu ul{font-size: 1;}
+
+div#lateral{font-size: 0.9em;}
+div#noticias h3 a{color: #003366;}
+div#noticias span.fecha{display: block;
+                        color: #999;}
+
+div#publicidad{color: #555; margin-top: 10px; margin-bottom: 10px;}
+div#publicidad a{color: #CC6600;}
+
+h1 span{visibility: hidden;}
+
+div#secundario h2{background-color: #DB905C; text-align: left; padding-left: 5px;}
+div#secundario{border-style: solid; border-color: #DB905C; border-width: 2px; padding: 5px; clear: none;}
+
+#pie { clear: both; background-color: #F8F8F8; border-color: #cacaca; border-style: solid none solid none;}
+
+/* Añado los reajustes que se le hizo en el ejercicio 2 para poder ver con más claridad lo que tengo que hacer */
+div#noticias{background-color: #F8F8F8; border-style: solid; border-color: #cacaca;padding: 5%;}
+div#publicidad{background-color: #FFF6CD; border-style:dotted; border-color:#dfb871; padding: 5%;}
+
+#cabecera h1{background-image: url('logo.gif');}
+/*==========================================================================*/

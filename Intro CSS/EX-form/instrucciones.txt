@@ -1,0 +1,5 @@
+Donde estaba en el ejercicio original el contenido de la página 
+tenemos que introducir un formulario.
+
+foco: al primero se le cambie el fondo,
+al segundo se le cambia el borde y la textarea haga ambas

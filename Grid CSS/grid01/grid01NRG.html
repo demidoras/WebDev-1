@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="ASTER">
+        <style>
+            .container{
+                display: grid;
+                grid-template-columns: 4;
+                grid-template-rows: 7;
+                gap: 15px;
+                grid-template-areas:
+                'header header header header'
+                'lateral g1 g2 g3'
+                'lateral g4 g5 g6'
+                'lateral g7 g8 g9'
+                'lateral g10 g11 g12'
+                'lateral g13 g14 g15'
+                'pie pie pie pie';
+            }
+
+            .header{
+                grid-area: header;
+                border: solid black 2px;
+                background-color: rgb(236, 181, 181);
+            }
+
+            .lateral{
+                grid-area: lateral;
+                border: solid black 2px;
+                background-color: rgb(151, 219, 196);
+                width: fit-content;
+            }
+
+            .g1, .g2, .g3, .g4, .g5, .g6, .g7, .g8, .g9, .g10, 
+            .g11, .g11, .g12, .g13, .g13, .g14, .g15{
+                border: dashed 2px blue;
+                padding: 5px;
+                background-color: rgb(230, 248, 248);
+            }
+
+            .g1{grid-area: g1;}
+            .g2{grid-area: g2;}
+            .g3{grid-area: g3;}
+            .g4{grid-area: g4;}
+            .g5{grid-area: g5;}
+            .g6{grid-area: g6;}
+            .g7{grid-area: g7;}
+            .g8{grid-area: g8;}
+            .g9{grid-area: g9;}
+            .g10{grid-area: g10;}
+            .g11{grid-area: g11;}
+            .g12{grid-area: g12;}
+            .g13{grid-area: g13;}
+            .g14{grid-area: g14;}
+            .g15{grid-area: g15;}
+
+            .pie{
+                grid-area: pie;
+                border: dotted 2px rgb(221, 139, 45);
+                background-color: rgb(250, 249, 219);
+            }
+        </style>
+    </head>
+    <body class="container">
+        <div class="header">Menú</div>
+        <div class="lateral">Lateral</div>
+        <div class="g1">Lorem ipsum dolor sit amet,</div>
+        <div class="g2">consectetur adipiscing elit,</div>
+        <div class="g3">sed do eiusmod tempor</div>
+        <div class="g4">incididunt ut labore</div>
+        <div class="g5">et dolore magna aliqua.</div>
+        <div class="g6">Senectus et netus et malesuada</div>
+        <div class="g7">fames ac turpis egestas.</div>
+        <div class="g8">At risus viverra adipiscing at in.</div>
+        <div class="g9">Fames ac turpis egestas integer eget.</div>
+        <div class="g10">Cras semper auctor neque vitae.</div>
+        <div class="g11">Fermentum odio eu feugiat</div>
+        <div class="g12">pretium nibh ipsum consequat nisl.</div>
+        <div class="g13">Morbi tempus iaculis</div>
+        <div class="g14">urna id volutpat lacus.</div>
+        <div class="g15">Mauris sit amet massa vitae</div>
+        <div class="pie">Pie</div>
+
+    </body>
+
+</html>

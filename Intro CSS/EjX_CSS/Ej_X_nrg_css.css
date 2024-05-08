@@ -1,0 +1,54 @@
+/*======================================================
+Las características del diseño de esta página son:
+
+    Un diseño fijo centrado con un ancho de 960 px.
+    El encabezado de nivel 1 centrado.
+    El contenido principal de la página se organiza en dos columnas, una de 260 px de ancho y la otra el espacio restante de 700 px.
+    La lista que explica el contenido del libro se muestra como un texto a tres columnas del mismo ancho.
+
+Puedes modificar el código HTML proporcionado para añadir los identificadores y clases que necesites. 
+También puedes añadir etiquetas <div> para definir elementos contenedores en la página.
+=========================================================*/
+.nopadding{
+    padding: 0;
+}
+
+#container{
+    position: fixed;
+    width: 960px;
+    margin: 50px;
+    padding: 50px;
+}
+
+#title{
+    text-align: center;
+}
+
+#sidedatos{
+    float: left;
+    width: 260px;
+}
+
+#principal{
+    float: right;
+    width: 700px;
+}
+
+#principal #content p{
+    column-span: all;
+}
+
+#principal #content ul{
+    /*He usado la sección sobre columnas en
+    w3s para hacer esta parte*/
+    column-count: 3;
+    column-width: 230px;
+    column-gap: 5px;
+}
+
+#principal #content ul li{
+    list-style: none;
+    /*Añado un break porque sin él el texto de las columnas
+    no se divide como debería. También lo he buscado en w3s*/
+    break-after: column;
+}

@@ -1,0 +1,9 @@
+
+<!-- Formulario de productos (readonly): código, Ean13 -código de barras 13 dígitos, único- ean14 es el código pero proveniente del proveedor,
+     ean128 da todos los datos de producción con qr, Descripción, IVA (desplegable), Volumen (radio: litro o gramo)/Dimensiones/Unidades, 
+     Familia (desplegable) y se rellena género (desplegable) -taxonomías/categorías son muy importantes. 
+
+El precio NO SE DEBE GUARDAR EN LA TABLA PRODUCTO. Si se hiciera, no se podría actualizar correctamente. 
+Precio es una tabla aparte, donde se guarda código de producto, fecha en la que se da de alta el nuevo precio y precio nuevo.
+
+En las bases de datos, los registros no suelen eliminarse. Se pasan a otra tabla que funciona como historial.

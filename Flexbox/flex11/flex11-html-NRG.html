@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="ASTER">
+
+        <title>Flexbox: Catálogo de imágenes</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                width: 850px;
+                height: 50px;
+            }
+            header{
+                font-weight: bold;
+                font-size: 30px;
+                background-color: rgb(46, 46, 46);
+                color: white;
+                padding:15px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            article.nowrap{
+                flex-wrap: nowrap;
+            }
+
+            article.wrap{
+                flex-wrap: wrap;
+            }
+
+            article{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                background-color: rgb(204, 204, 204);
+                margin-top: 30px;
+            }
+
+            article img{
+                color: rgb(46, 46, 46);
+                padding: 20px;
+                font-size: 10px;
+                width: 70px;
+                height: 70px;
+                border-style: dotted;
+                border-color: rgb(46, 46, 46);
+                margin: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <header>Flexbox - Catálogo de imágenes</header>
+            <section>
+                <h2>flex-wrap: nowrap;</h2>
+                <article class="nowrap">
+                    <img style="order: 1;" src="imagenes/man.svg">
+                    <img style="order: 2;" src="imagenes/boy.svg">
+                    <img style="order: 3;" src="imagenes/girl.svg">
+                    <img style="order: 4;" src="imagenes/girl-1.svg">
+                    <img style="order: 5;" src="imagenes/girl-2.svg">
+                    <img style="order: 6;" src="imagenes/girl-3.svg">
+                    <img style="order: 7;" src="imagenes/man.svg">
+                    <img style="order: 8;" src="imagenes/boy.svg">
+                </article>
+                <h2>flex-wrap: wrap;</h2>
+                <article class="wrap">
+                    <img style="order: 1;" src="imagenes/man.svg">
+                    <img style="order: 2;" src="imagenes/boy.svg">
+                    <img style="order: 3;" src="imagenes/girl.svg">
+                    <img style="order: 4;" src="imagenes/girl-1.svg">
+                    <img style="order: 5;" src="imagenes/girl-2.svg">
+                    <img style="order: 6;" src="imagenes/girl-3.svg">
+                    <img style="order: 7;" src="imagenes/man.svg">
+                    <img style="order: 8;" src="imagenes/boy.svg">
+                    <img style="order: 9;" src="imagenes/girl.svg">
+                    <img style="order: 10;" src="imagenes/girl-1.svg">
+                    <img style="order: 11;" src="imagenes/girl-2.svg">
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

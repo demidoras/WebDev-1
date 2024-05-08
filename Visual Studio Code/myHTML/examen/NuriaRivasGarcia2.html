@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"><meta name="author" content="Nuria Rivas Garcia"><meta name="description" content="Ejercicio2">
+        <title>Formulario de proveedor</title>
+    </head>
+    <body>
+        <h1>Nuria Rivas Garc&iacutea</h1>
+        <hr>
+        <form enctype="application/x-www-form-urlencoded" method="post"> 
+            <fieldset><legend>Datos del usuario</legend>
+                <label for="codigo">C&oacutedigo:</label>&nbsp;<input id="codigo" type="text" maxlength="3" max="3" size="3" pattern="[0-9]{3}" required>
+            <!--He decidido que el código sea un input type text porque de lo contrario introducir el código sería engorroso mediante los botones del campo,
+                 y si se intenta escribir en el input type number los atributos size y maxlength no parecen funcionar-->
+             <br><br><label for="fecha">Fecha de alta:</label>&nbsp;<input id="fecha" type="date">
+                <br><br><label for="tipoprov">Tipo de Proveedor:</label><input id="tipoprov" type="radio" name="radio1" required>Nacional&nbsp;
+                    <input id="tipoprov" type="radio" name="radio1" required>Internacional
+            </fieldset>
+            <fieldset><legend>Datos de contacto</legend>
+                <label for="comm">¿Quieres recibir comunicaciones nuestras?</label>&nbsp;<input id="comm" type="radio" name="radio2" required>Siempre
+                &nbsp;<input id="comm" type="radio" name="radio2">Seg&uacuten configuraci&oacuten&nbsp;<input id="comm" type="radio" name="radio2">Nunca
+                <br><br><label for="domicilio">Domicilio Social:</label>&nbsp;<input id="domicilio" type="text" placeholder="Calle España 1, Planeta Tierra 12345" size="50" maxlength="60" required>
+            <!--He quitado el pattern del campo de dirección porque causaba problemas al introducirla. E.g. no me permitía enviar el formulario
+                porque arrojaba un mensaje de error informando que no coincidía con el tipo de caracteres solicitado.-->
+                <br><br><label for="telf">Tel&eacutefono:</label>&nbsp;<input id="telf" type="tel" size="9" placeholder="123456789" maxlength="9" max="9" pattern="[0-9]{9}" required>
+                 <br><br><label for="web">Sitio web:</label>&nbsp;<input id="web" type="text" placeholder="tuweb@arrobaweb.es" size="25" maxlegth="30" max="30" required>
+            </fieldset>
+            <fieldset><legend>Informaci&oacuten sobre impuestos</legend>
+                <label for="checkbox">Impuestos:</label>&nbsp;<input id="checkbox" name="casilla1" type="checkbox" required>Recargo de equivaelncia&nbsp;<input id="checkbox" name="casilla1" type="checkbox">Exento IVA
+                 <br><br><label for="irpf">Porcentaje IRPF:</label>&nbsp;<input id="irpf" type="number" max="100" maxlength="3" size="3" pattern="[0-9]{3}" required>
+            </fieldset>
+                <fieldset><legend>(Opcional) Comentarios</legend>
+                <label for="comments">Observaciones:</label>&nbsp;<input id="comments" type="textarea" placeholder="Deja aqu&iacute tu comentario" maxlength="300">
+            </fieldset>
+            <hr>
+            <br><br><input type="submit">&nbsp;&nbsp;<input type="reset">
+        </form> 
+    </body>
+</html>
